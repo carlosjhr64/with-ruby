@@ -19,6 +19,9 @@ The following `VimMarkdown` plugins are available:
 * [navigation](NAVIGATION.md)
 * [syntax](SYNTAX.md)
 
-If not specified, `Plugins:` defaults to "navigation syntax" or as set in `g:VimMarkdownMetadataPlugins`.
+If not specified, `Plugins:` defaults to as set in `g:VimMarkdownMetadataPlugins`(or nothing).
+```vim
+let g:VimMarkdownMetadataPlugins = 'navigation'
+```
 More Vim-Ruby plugins can be added.
 See [`markdown.rb`](lib/vim-markdown.rb?self.plugins) to see how `VimMarkdown` requires in the plugins.

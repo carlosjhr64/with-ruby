@@ -4,7 +4,7 @@ Plugins: navigation syntax
 
 # WithRuby
 
-* [VERSION 2.0.210712](https://github.com/carlosjhr64/with-ruby/releases)
+* [VERSION 2.0.210717](https://github.com/carlosjhr64/with-ruby/releases)
 * [github](https://github.com/carlosjhr64/with-ruby)
 
 ## Description:
