@@ -1,6 +1,6 @@
 # VimMarkdown is loaded into VIM when user opens a markdown file.
 module VimMarkdown
-  VERSION = '2.0.210717'
+  VERSION = '2.0.210719'
 
   # Note: Highly overloaded
   def self.metadata(key=nil, value=nil)
