@@ -11,6 +11,7 @@ module Syntax
       endfunction
       syn region vimMarkdownMetaDataFold start="\%^---" end="---" keepend transparent fold
       setlocal foldmethod=syntax
+      setlocal foldlevel=0
       setlocal foldtext=VimMarkdownFoldText()
       setlocal conceallevel=2
     }

@@ -11,6 +11,7 @@ endfunction
 endtry
 eval
 foldend
+foldlevel
 foldmethod
 foldstart
 foldtext
