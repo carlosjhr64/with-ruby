@@ -18,7 +18,7 @@ Plugins: navigation syntax
 Using [Vim-Plug](https://github.com/junegunn/vim-plug),
 add to your `~/.config/nvim/init.vim`:
 ```vim
-" The following has my suggested vim-plug directory, but use your's:
+" The following has my suggested vim-plug directory, but use yours:
 call plug#begin('~/.local/share/nvim/site/pack/vim-plug')
 " Maybe other people's plugs...
 Plug 'carlosjhr64/with-ruby'
