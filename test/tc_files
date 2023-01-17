@@ -5,7 +5,7 @@ class TestFiles < Test::Unit::TestCase
   def test_files
     # Ensure I reference all relevant files in doc/with-ruby.txt.
     files = `find . -type f | egrep -v '^(./.git/)|(./tmp/)'`.split.map{_1.gsub(/^\.\//,'')}
-    files.delete('TODO.txt')
+    files.delete('TODO.md')
     files.delete('doc/with-ruby.txt')
     refs = File.read('doc/with-ruby.txt').scan(%r{[(][\w./-]+[)]}).map{_1[1...-1].sub(/^\.\.\//,'')}
     refs.delete_if{/^https?:/.match? _1}
