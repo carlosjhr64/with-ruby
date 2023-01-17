@@ -9,13 +9,13 @@ Plugins: navigation syntax
 
 ## Description:
 
-`WithRuby` facilitates writting vim plugins in ruby.
+`WithRuby` facilitates writing VIM plug-ins in ruby.
 
 ## Installation
 
 ### Via vim-plug
 
-Using [Vim-Plug](https://github.com/junegunn/vim-plug),
+Using [vim-plug](https://github.com/junegunn/vim-plug),
 add to your `~/.config/nvim/init.vim`:
 ```vim
 " The following has my suggested vim-plug directory, but use yours:
@@ -28,7 +28,7 @@ call plug#end()
 ### Via git clone
 
 Create a `site/pack/bundle/start` directory(or wherever you bundles are) and clone the git there:
-```shell
+```console
 $ mkdir -p ~/.local/share/nvim/site/pack/bundle/start
 $ cd ~/.local/share/nvim/site/pack/bundle/start
 $ git clone https://github.com/carlosjhr64/with-ruby
