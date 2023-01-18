@@ -43,7 +43,7 @@ module Navigation
         VIM.command "help #{link[1..-1]}"
         return
       when /^https?:/
-        system "xdg-open '#{link}' &>/dev/null"
+        spawn("xdg-open '#{link}'", out: '/dev/null', err: [:child, :out])
         return
       when /^([^#?]+)#L(\d+)$/
         file, number = $1, $2
