@@ -1,7 +1,10 @@
+require 'uri'
+
 module VimMarkdown
 module Navigation
   MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^\(\)]*)\)/
   HELP_TAG      = /(?<link>\|[^"*\|\s]+)\|/
+  BARE_LINK     = URI::regexp(%w'http https')
 
   def self.anchor(heading)
     # Note that github uses '-' for spaces
@@ -14,19 +17,28 @@ module Navigation
     VIM.command "noh"
   end
 
+  def self.link_offset(md)
+    return md[:link],md.offset(0)[1]
+  rescue
+    return md[0],md.offset(0)[1]
+  end
+
   def self.link_handler(link = nil)
     unless link
       row,column = VIM::Window.current.cursor
       line = VIM::Buffer.current[row]
-      [MARKDOWN_LINK, HELP_TAG].each do |pattern|
+      [MARKDOWN_LINK, HELP_TAG, BARE_LINK].each do |pattern|
         col = column
+        # See if the current line matches:
         if md = pattern.match(line)
-          link,offset = md[:link],md.offset(0)[1]
+          link,offset = Navigation.link_offset(md)
+          # Accept the last match that does not occur past the cursor:
           while col > offset and md = pattern.match(md.post_match)
             col -= offset
-            link,offset = md[:link],md.offset(0)[1]
+            link,offset = Navigation.link_offset(md)
           end
         end
+        # Go as soon as a link is found:
         break if link
       end
     end

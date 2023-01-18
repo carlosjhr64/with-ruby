@@ -4,6 +4,7 @@ after_ftplugin
 after_syntax
 anchor
 b
+BARE_LINK
 block_given
 Buffer
 capitalize
@@ -36,6 +37,7 @@ length
 line
 link
 link_handler
+link_offset
 LoadError
 map
 MARKDOWN_LINK
@@ -53,6 +55,7 @@ plugin
 plugins
 post_match
 print
+regexp
 require
 row
 ruby
@@ -64,6 +67,7 @@ string
 strip
 Syntax
 to_s
+URI
 v
 value
 VERSION

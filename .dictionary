@@ -36,9 +36,12 @@ nnoremap
 noh
 NONINFRINGEMENT
 nvim
+regexp
 setlocal
 sublicense
 syn
+uri
+URI
 VimMarkdown
 VimMarkdownFoldText
 VimMarkdownMetadata
