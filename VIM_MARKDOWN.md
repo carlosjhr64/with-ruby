@@ -6,13 +6,13 @@
 ## Usage
 
 `VimMarkdown` expects maybe a markdown metadata header like:
-
-    ---
-    Title:   The Title  
-    Author:  John Doe  
-    Plugins: navigation syntax  
-    ---
-
+```markdown
+---
+Title:   The Title
+Author:  John Doe
+Plugins: navigation syntax
+---
+```
 The `Plugins:` metadata key should list the sub-plugins to be activated on the markdown file.
 The following `VimMarkdown` plugins are available:
 
