@@ -1,0 +1,1 @@
+ruby VimMarkdown.after(:ftplugin)

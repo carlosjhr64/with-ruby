@@ -1,0 +1,112 @@
+
+ \ \        / ( ) | | |   |  __ \     | |                          ~
+  \ \  /\  / / _| |_| |__ | |__) |   _| |__  _   _                 ~
+   \ \/  \/ / | | __| '_ \|  _  / | | | '_ \| | | |                ~
+    \  /\  /  | | |_| | | | | \ \ |_| | |_) | |_| |                ~
+     \/  \/   |_|\__|_| |_|_|  \_\__,_|_.__/ \__, |                ~
+                                              __/ |                ~
+                                             |___/                 ~
+
+====================================================================
+CONTENTS                                               *WithRuby*
+
+  ENVIROMENT
+    LOAD_PATH
+
+  PLUGINS
+    VimMarkdown
+
+  FILES
+    Markdowns
+    Vims
+    Docs
+    Rubys
+    Tests
+    Lexicons
+    Fishs
+    Gits
+
+====================================================================
+ENVIROMENT
+
+LOAD_PATH
+
+    Ruby load path is set to start with
+    ['./lib', '~/path-to/with-ruby/lib'].
+
+====================================================================
+PLUGINS
+
+VimMarkdown
+
+    WithRuby inludes VimMarkdown, which adds to vim's markdown
+    syntax and link navigation.
+
+====================================================================
+FILES
+
+  Markdowns
+
+    [README.md](../README.md)
+    [VIM_MARKDOWN.md](../VIM_MARKDOWN.md)
+    [NAVIGATION.md](../NAVIGATION.md)
+    [SYNTAX.md](../SYNTAX.md)
+    doc/
+      with-ruby.txt
+
+  Vims
+
+    plugin/
+      [with-ruby.vim](../plugin/with-ruby.vim)
+    ftplugin/
+      [markdown.vim](../ftplugin/markdown.vim)
+    after/
+      ftplugin/
+        [markdown.vim](../after/ftplugin/markdown.vim)
+      syntax/
+        [markdown.vim](../after/syntax/markdown.vim)
+
+  Docs
+
+    [tags](../tags)
+    doc/
+      [tags](../doc/tags)
+      with-ruby.txt
+
+  Rubys
+
+    [.ruby-version](../.ruby-version)
+    [.irbrc](../.irbrc)
+    lib/
+      [vim-markdown.rb](../lib/vim-markdown.rb)
+      vim-markdown/
+        [navigation.rb](../lib/vim-markdown/navigation.rb)
+        [syntax.rb](../lib/vim-markdown/syntax.rb)
+
+  Tests
+
+    test/
+      [tc_version](../test/tc_version)
+      [tc_readme_rocket_check](../test/tc_readme_rocket_check)
+      [tc_lexicon](../test/tc_lexicon)
+      [tc_files](../test/tc_files)
+
+  Lexicons
+
+    [.lexicon](../.lexicon)
+    [.dictionary](../.dictionary)
+
+  Fishs
+
+These just sets up [fish](https://fishshell.com/) via [fisher](https://github.com/jorgebucaran/fisher)'s
+[pkg-goto](https://github.com/carlosjhr64/pkg-goto) and [theme-local](https://github.com/carlosjhr64/theme-local).
+
+    [.greeting](../.greeting)
+    [.prompt](../.prompt)
+    [.config.fish](../.config.fish)
+
+  Gits
+
+    [.gitignore](../.gitignore)
+
+====================================================================
