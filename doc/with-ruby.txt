@@ -75,35 +75,11 @@ FILES
 
   Rubys
 
-    [.ruby-version](../.ruby-version)
-    [.irbrc](../.irbrc)
     lib/
       [vim-markdown.rb](../lib/vim-markdown.rb)
       vim-markdown/
         [navigation.rb](../lib/vim-markdown/navigation.rb)
         [syntax.rb](../lib/vim-markdown/syntax.rb)
-
-  Tests
-
-    test/
-      [tc_version](../test/tc_version)
-      [tc_readme_rocket_check](../test/tc_readme_rocket_check)
-      [tc_lexicon](../test/tc_lexicon)
-      [tc_files](../test/tc_files)
-
-  Lexicons
-
-    [.lexicon](../.lexicon)
-    [.dictionary](../.dictionary)
-
-  Fishs
-
-These just sets up [fish](https://fishshell.com/) via [fisher](https://github.com/jorgebucaran/fisher)'s
-[pkg-goto](https://github.com/carlosjhr64/pkg-goto) and [theme-local](https://github.com/carlosjhr64/theme-local).
-
-    [.greeting](../.greeting)
-    [.prompt](../.prompt)
-    [.config.fish](../.config.fish)
 
   Gits
 

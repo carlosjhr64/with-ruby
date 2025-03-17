@@ -41,8 +41,6 @@ See neovim's `:help packages` for more info.
 * Adds `with-ruby/lib` and `./lib` to ruby's load path.
 * For help see |WithRuby|, `:help WithRuby`.
 * Includes [`VimMarkdown`](VIM_MARKDOWN.md) for added features on `markdown` files.
-  * [Navigation](NAVIGATION.md)
-  * [Syntax](SYNTAX.md)
 
 ## LICENSE:
 
