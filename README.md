@@ -1,4 +1,4 @@
---- #
+--- # Set your choice of plugins here.
 Plugins: navigation syntax
 ... #
 
@@ -10,6 +10,7 @@ Plugins: navigation syntax
 ## Description:
 
 `WithRuby` facilitates writing VIM plug-ins in ruby.
+Uses the [neovim gem](https://github.com/neovim/neovim-ruby).
 
 ## Installation
 
@@ -34,14 +35,14 @@ $ cd ~/.local/share/nvim/site/pack/bundle/start
 $ git clone https://github.com/carlosjhr64/with-ruby
 ```
 See neovim's `:help packages` for more info.
-There's an analogous way in vim-8 too.
 
 ## Features:
 
 * Adds `with-ruby/lib` and `./lib` to ruby's load path.
+* For help see |WithRuby|, `:help WithRuby`.
 * Includes [`VimMarkdown`](VIM_MARKDOWN.md) for added features on `markdown` files.
-
-For help see |WithRuby|, `:help WithRuby`.
+  * [Navigation](NAVIGATION.md)
+  * [Syntax](SYNTAX.md)
 
 ## LICENSE:
 
