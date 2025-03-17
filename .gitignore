@@ -16,6 +16,5 @@
 TODO.*
 *.swp
 pkg
-tags
 test
 tmp
