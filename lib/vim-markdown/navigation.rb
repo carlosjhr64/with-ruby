@@ -3,7 +3,15 @@
 require 'uri'
 
 module VimMarkdown
-  # This module provides a way to navigate to links in markdown files.
+  # This module provides a way to navigate links in markdown files.
+  # When the user presses <CR>, the most apropriate action is taken based on the
+  # the context the cursor is in. Precedence is as follows:
+  # * A markdown link: [text](url)
+  # * A help tag: |tag|
+  # * A bare link: http://example.com
+  # * A cword tag
+  # * A cword help
+  # See [NAVIGATION.md](../../NAVIGATION) for examples of each link type.
   module Navigation
     MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^\(\)]*)\)/
     HELP_TAG = /(?<link>\|[^"*\|\s]+)\|/
