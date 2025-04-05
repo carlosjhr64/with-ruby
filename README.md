@@ -14,6 +14,8 @@ Uses the [neovim gem](https://github.com/neovim/neovim-ruby).
 
 ## Installation
 
+* Required Ruby version: `>= 3.4`
+
 ### Via vim-plug
 
 Using [vim-plug](https://github.com/junegunn/vim-plug),
