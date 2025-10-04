@@ -13,8 +13,8 @@ module VimMarkdown
   # * A cword help
   # See [NAVIGATION.md](../../NAVIGATION) for examples of each link type.
   module Navigation
-    MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^\(\)]*)\)/
-    HELP_TAG = /(?<link>\|[^"*\|\s]+)\|/
+    MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^()]*)\)/
+    HELP_TAG = /(?<link>\|[^"*|\s]+)\|/
     begin
       BARE_LINK = URI::RFC2396_PARSER.make_regexp(%w[http https])
     rescue StandardError
@@ -77,7 +77,7 @@ module VimMarkdown
       when /^([^#?]+)#L(\d+)$/
         file = ::Regexp.last_match(1)
         number = ::Regexp.last_match(2)
-      when /^([^?#]+)[#]([^?#]+)$/
+      when /^([^?#]+)#([^?#]+)$/
         file = ::Regexp.last_match(1)
         anchor = ::Regexp.last_match(2)
       when /^([^?#]+)[?]([^?#]+)$/
