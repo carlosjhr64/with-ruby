@@ -48,6 +48,7 @@ FILES
   Markdowns
 
     [README.md](../README.md)
+    [CREDITS.md](../CREDITS.md)
     [VIM_MARKDOWN.md](../VIM_MARKDOWN.md)
     [NAVIGATION.md](../NAVIGATION.md)
     [SYNTAX.md](../SYNTAX.md)
@@ -76,6 +77,7 @@ FILES
   Rubys
 
     lib/
+      [with-ruby.rb](../lib/with-ruby.rb)
       [vim-markdown.rb](../lib/vim-markdown.rb)
       vim-markdown/
         [navigation.rb](../lib/vim-markdown/navigation.rb)
