@@ -2,5 +2,5 @@
 
 # This is the central module for the WithRuby project.
 module WithRuby
-  VERSION = '4.0.251004'
+  VERSION = '4.0.251005'
 end
