@@ -1,5 +1,5 @@
 --- # Set your choice of plugins here.
-Plugins: navigation syntax
+Plugins: navigation fold
 ... #
 
 # WithRuby
