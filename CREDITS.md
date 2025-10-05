@@ -11,3 +11,4 @@ please submit a pull request with the suggested addition.
 
 + [VimWiki](https://github.com/vimwiki/vimwiki): VimWiki is a personal wiki for Vim 
 + [Neovim](https://neovim.io/): The modern Vim fork this plugin is built for
++ [tpope](https://github.com/tpope/vim-markdown): For his `MarkdownFold()` function
