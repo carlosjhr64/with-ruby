@@ -21,9 +21,6 @@ CONTENTS                                               *WithRuby*
     Vims
     Docs
     Rubys
-    Tests
-    Lexicons
-    Fishs
     Gits
 
 ====================================================================
@@ -64,8 +61,6 @@ FILES
     after/
       ftplugin/
         [markdown.vim](../after/ftplugin/markdown.vim)
-      syntax/
-        [markdown.vim](../after/syntax/markdown.vim)
 
   Docs
 
@@ -81,7 +76,7 @@ FILES
       [vim-markdown.rb](../lib/vim-markdown.rb)
       vim-markdown/
         [navigation.rb](../lib/vim-markdown/navigation.rb)
-        [syntax.rb](../lib/vim-markdown/syntax.rb)
+        [fold.rb](../lib/vim-markdown/fold.rb)
 
   Gits
 
