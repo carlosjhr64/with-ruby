@@ -1,28 +1,68 @@
 # frozen_string_literal: true
 
 module VimMarkdown
-  # This module adds to the markdown syntax a fold for the metadata header when
-  # the metadata start and end marker is set to `--- #` and `... #`. The hashtag
-  # is used to disambiguate from the use of the horizontal rule in the markdown
-  # syntax and is legal in the YAML spec. Furthermore, it marks intent by the
-  # writer to fold the metadata section.
-  # The module also sets the fold level(0) and the conceal level(2).
   module Syntax
-    VIM_MARKDOWN_FOLD_TEXT = %q{
-      function VimMarkdownFoldText()
-        if (v:foldstart == 1)
-          return "--- MetaData(zo/zc to view/close) "
-        end
-        let n = v:foldend - v:foldstart + 1
-        return "--- " . n . " lines: "
-      endfunction
-      setlocal foldmethod=marker
-      setlocal foldmarker=---\ #,...\ #
-      setlocal foldlevel=0
-      setlocal foldtext=VimMarkdownFoldText()
-      setlocal conceallevel=2
-    }
+    def self.markdown_fold
+      lnum = VIM.evaluate('v:lnum').to_i
+      return '>3' if in_yaml_header?(lnum)
 
-    def self.after_syntax = VIM.command VIM_MARKDOWN_FOLD_TEXT
+      line = VIM::Buffer.current[lnum]
+      if line.match?(/^#+ /) && not_code_block?(lnum)
+        return ">#{line.index(' ')}"
+      end
+      '='
+    end
+
+    def self.in_yaml_header?(lnum)
+      buffer = VIM::Buffer.current
+      return false unless buffer[1].match?(/^---(\s*#.*)?$/)
+
+      stays_true = true
+      1.upto(lnum) do |i|
+        return false unless stays_true
+        line = buffer[i].chomp
+        stays_true = false if line.empty? ||
+                              line.match?(/^\.\.\.(\s*#.*)?$/) ||
+                              line.match?(/^---(\s*#.*)?$/)
+      end
+      true
+    end
+
+    def self.in_code_block?(lnum)
+      buffer = VIM::Buffer.current
+      in_code_block = false
+      1.upto(lnum) do |i|
+        line = buffer[i] || ''
+        in_code_block = !in_code_block if line.match?(/^```/)
+      end
+      in_code_block
+    end
+
+    def self.not_code_block?(lnum) = !in_code_block?(lnum)
+
+    def self.markdown_fold_text
+      # Fold text for meta-data
+      foldstart = VIM.evaluate('v:foldstart').to_i
+      if foldstart == 1
+        return '--- MetaData(zo/zc to view/close) '
+      end
+      # Text for headings... Same as tpope's.
+      foldend = VIM.evaluate('v:foldend').to_i
+      n = foldend - foldstart + 1
+      heading = VIM::Buffer.current[foldstart].strip
+      "#{heading} [#{n} lines]"
+    end
+
+    def self.after_syntax = VIM.command "
+      function VimMarkdownFold()
+        return rubyeval('VimMarkdown::Syntax.markdown_fold')
+      endfunction
+      function VimMarkdownFoldText()
+        return rubyeval('VimMarkdown::Syntax.markdown_fold_text')
+      endfunction
+      setlocal foldmethod=expr
+      setlocal foldexpr=VimMarkdownFold()
+      setlocal foldtext=VimMarkdownFoldText()
+    "
   end
 end
