@@ -16,6 +16,18 @@ Uses the [neovim gem](https://github.com/neovim/neovim-ruby).
 
 * Required Ruby version: `>= 3.4`
 
+Recommended setup for `lazy.nvim`:
+```lua
+{
+  'carlosjhr64/with-ruby',
+  version = '*', -- latest stable version
+  config = function()
+    -- Optional...
+    -- Always include WithRuby's Navigation and Fold plugins:
+    vim.g.VimMarkdownMetadataPlugins = 'navigation fold'
+  end,
+}
+```
 ### Via vim-plug
 
 Using [vim-plug](https://github.com/junegunn/vim-plug),
