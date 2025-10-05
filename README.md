@@ -4,7 +4,7 @@ Plugins: navigation syntax
 
 # WithRuby
 
-* [VERSION 4.0.251004](https://github.com/carlosjhr64/with-ruby/releases)
+* [VERSION 4.0.251005](https://github.com/carlosjhr64/with-ruby/releases)
 * [github](https://github.com/carlosjhr64/with-ruby)
 
 ## Description:
@@ -21,6 +21,7 @@ Uses the [neovim gem](https://github.com/neovim/neovim-ruby).
 Using [vim-plug](https://github.com/junegunn/vim-plug),
 add to your `~/.config/nvim/init.vim`:
 ```vim
+# In vim:
 " The following has my suggested vim-plug directory, but use yours:
 call plug#begin('~/.local/share/nvim/site/pack/vim-plug')
 " Maybe other people's plugs...
@@ -32,6 +33,7 @@ call plug#end()
 
 Create a `site/pack/bundle/start` directory(or wherever you bundles are) and clone the git there:
 ```console
+# In console:
 $ mkdir -p ~/.local/share/nvim/site/pack/bundle/start
 $ cd ~/.local/share/nvim/site/pack/bundle/start
 $ git clone https://github.com/carlosjhr64/with-ruby
