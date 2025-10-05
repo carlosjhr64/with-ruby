@@ -15,8 +15,8 @@ module VimMarkdown
   module Navigation
     def self.enable
       # vim mappings
-      VIM.command 'nnoremap <buffer> <Backspace> <C-o>'
-      VIM.command 'nnoremap <buffer> <CR> :ruby VimMarkdown::Navigation.link_handler<CR>'
+      VIM.command 'nnoremap <Backspace> <C-o>'
+      VIM.command 'nnoremap <CR> :ruby VimMarkdown::Navigation.link_handler<CR>'
     end
 
     MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^()]*)\)/

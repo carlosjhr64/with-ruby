@@ -1,29 +1,43 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-BARE_LINK	lib/vim-markdown/navigation.rb	/^      BARE_LINK = URI::RFC2396_PARSER.make_regexp(%w[http https])$/;"	C	class:VimMarkdown.Navigation
-HELP_TAG	lib/vim-markdown/navigation.rb	/^    HELP_TAG = \/(?<link>\\|[^"*\\|\\s]+)\\|\/$/;"	C	class:VimMarkdown.Navigation
-MARKDOWN_LINK	lib/vim-markdown/navigation.rb	/^    MARKDOWN_LINK = \/\\[[^\\[\\]]*\\]\\((?<link>[^\\(\\)]*)\\)\/$/;"	C	class:VimMarkdown.Navigation
-Navigation	lib/vim-markdown/navigation.rb	/^  module Navigation$/;"	m	class:VimMarkdown
-Syntax	lib/vim-markdown/syntax.rb	/^  module Syntax$/;"	m	class:VimMarkdown
-TAG_OR_HELP	lib/vim-markdown/navigation.rb	/^    TAG_OR_HELP   = %q{$/;"	C	class:VimMarkdown.Navigation
-VERSION	lib/with-ruby.rb	/^  VERSION = '3.0.250317'$/;"	C	class:WithRuby
-VIM_MARKDOWN_FOLD_TEXT	lib/vim-markdown/syntax.rb	/^    VIM_MARKDOWN_FOLD_TEXT = %q{$/;"	C	class:VimMarkdown.Syntax
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/fox/Git/Ruby/with-ruby/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+BARE_LINK	lib/vim-markdown/navigation.rb	/^      BARE_LINK = URI.regexp(%w[http https]) # Fallback for older Ruby$/;"	C	module:VimMarkdown.Navigation
+BARE_LINK	lib/vim-markdown/navigation.rb	/^      BARE_LINK = URI::RFC2396_PARSER.make_regexp(%w[http https])$/;"	C	module:VimMarkdown.Navigation
+Fold	lib/vim-markdown/fold.rb	/^  module Fold$/;"	m	module:VimMarkdown
+HELP_TAG	lib/vim-markdown/navigation.rb	/^    HELP_TAG = \/(?<link>\\|[^"*|\\s]+)\\|\/$/;"	C	module:VimMarkdown.Navigation
+MARKDOWN_LINK	lib/vim-markdown/navigation.rb	/^    MARKDOWN_LINK = \/\\[[^\\[\\]]*\\]\\((?<link>[^()]*)\\)\/$/;"	C	module:VimMarkdown.Navigation
+Navigation	lib/vim-markdown/navigation.rb	/^  module Navigation$/;"	m	module:VimMarkdown
+TAG_OR_HELP	lib/vim-markdown/navigation.rb	/^    TAG_OR_HELP   = %q{$/;"	C	module:VimMarkdown.Navigation
+VERSION	lib/with-ruby.rb	/^  VERSION = '4.0.251005'$/;"	C	module:WithRuby
 VimMarkdown	lib/vim-markdown.rb	/^module VimMarkdown$/;"	m
+VimMarkdown	lib/vim-markdown/fold.rb	/^module VimMarkdown$/;"	m
 VimMarkdown	lib/vim-markdown/navigation.rb	/^module VimMarkdown$/;"	m
-VimMarkdown	lib/vim-markdown/syntax.rb	/^module VimMarkdown$/;"	m
 WithRuby	lib/with-ruby.rb	/^module WithRuby$/;"	m
-after	lib/vim-markdown.rb	/^  def self.after(directory)$/;"	F	class:VimMarkdown
-after_ftplugin	lib/vim-markdown/navigation.rb	/^    def self.after_ftplugin$/;"	F	class:VimMarkdown.Navigation
-after_syntax	lib/vim-markdown/syntax.rb	/^    def self.after_syntax = VIM.command VIM_MARKDOWN_FOLD_TEXT$/;"	F	class:VimMarkdown.Syntax
-anchor_command	lib/vim-markdown/navigation.rb	/^    def self.anchor_command(heading)$/;"	F	class:VimMarkdown.Navigation
-link_cases	lib/vim-markdown/navigation.rb	/^    def self.link_cases(link)$/;"	F	class:VimMarkdown.Navigation
-link_get	lib/vim-markdown/navigation.rb	/^    def self.link_get$/;"	F	class:VimMarkdown.Navigation
-link_handler	lib/vim-markdown/navigation.rb	/^    def self.link_handler$/;"	F	class:VimMarkdown.Navigation
-link_offset	lib/vim-markdown/navigation.rb	/^    def self.link_offset(mdt)$/;"	F	class:VimMarkdown.Navigation
-match_link	lib/vim-markdown/navigation.rb	/^    def self.match_link(col, line, pattern)$/;"	F	class:VimMarkdown.Navigation
-metadata	lib/vim-markdown.rb	/^  def self.metadata(key)$/;"	F	class:VimMarkdown
-metadata_each	lib/vim-markdown.rb	/^  def self.metadata_each(buffer = VIM::Buffer.current, line_number = 1)$/;"	F	class:VimMarkdown
-metadata_set	lib/vim-markdown.rb	/^  def self.metadata_set(key, value)$/;"	F	class:VimMarkdown
-plugins	lib/vim-markdown.rb	/^  def self.plugins(plugins = VIM.evaluate('b:VimMarkdownMetadataPlugins'))$/;"	F	class:VimMarkdown
-search_command	lib/vim-markdown/navigation.rb	/^    def self.search_command(string)$/;"	F	class:VimMarkdown.Navigation
-symval	lib/vim-markdown.rb	/^  def self.symval(strval) = [strval[0].to_sym, strval[1]]$/;"	F	class:VimMarkdown
+anchor_command	lib/vim-markdown/navigation.rb	/^    def self.anchor_command(heading)$/;"	S	module:VimMarkdown.Navigation
+enable	lib/vim-markdown.rb	/^  def self.enable$/;"	S	module:VimMarkdown
+enable	lib/vim-markdown/fold.rb	/^    def self.enable = VIM.command "$/;"	S	module:VimMarkdown.Fold
+enable	lib/vim-markdown/navigation.rb	/^    def self.enable$/;"	S	module:VimMarkdown.Navigation
+in_code_block?	lib/vim-markdown/fold.rb	/^    def self.in_code_block?(lnum)$/;"	S	singletonMethod:VimMarkdown.Fold.enable
+in_yaml_header?	lib/vim-markdown/fold.rb	/^    def self.in_yaml_header?(lnum)$/;"	S	singletonMethod:VimMarkdown.Fold.enable
+link_cases	lib/vim-markdown/navigation.rb	/^    def self.link_cases(link)$/;"	S	module:VimMarkdown.Navigation
+link_get	lib/vim-markdown/navigation.rb	/^    def self.link_get$/;"	S	module:VimMarkdown.Navigation
+link_handler	lib/vim-markdown/navigation.rb	/^    def self.link_handler$/;"	S	module:VimMarkdown.Navigation
+link_offset	lib/vim-markdown/navigation.rb	/^    def self.link_offset(mdt)$/;"	S	module:VimMarkdown.Navigation
+markdown_fold	lib/vim-markdown/fold.rb	/^    def self.markdown_fold$/;"	S	singletonMethod:VimMarkdown.Fold.enable
+markdown_fold_text	lib/vim-markdown/fold.rb	/^    def self.markdown_fold_text$/;"	S	singletonMethod:VimMarkdown.Fold.enable.not_code_block?
+match_link	lib/vim-markdown/navigation.rb	/^    def self.match_link(col, line, pattern)$/;"	S	module:VimMarkdown.Navigation
+metadata	lib/vim-markdown.rb	/^  def self.metadata(key)$/;"	S	singletonMethod:VimMarkdown.symval
+metadata_each	lib/vim-markdown.rb	/^  def self.metadata_each(buffer = VIM::Buffer.current, line_number = 1)$/;"	S	singletonMethod:VimMarkdown.symval
+metadata_set	lib/vim-markdown.rb	/^  def self.metadata_set(key, value)$/;"	S	singletonMethod:VimMarkdown.symval
+not_code_block?	lib/vim-markdown/fold.rb	/^    def self.not_code_block?(lnum) = !in_code_block?(lnum)$/;"	S	singletonMethod:VimMarkdown.Fold.enable
+plugins	lib/vim-markdown.rb	/^  def self.plugins(plugins = VIM.evaluate('b:VimMarkdownMetadataPlugins'))$/;"	S	singletonMethod:VimMarkdown.symval
+search_command	lib/vim-markdown/navigation.rb	/^    def self.search_command(string)$/;"	S	module:VimMarkdown.Navigation
+symval	lib/vim-markdown.rb	/^  def self.symval(strval) = [strval[0].to_sym, strval[1]]$/;"	S	module:VimMarkdown
