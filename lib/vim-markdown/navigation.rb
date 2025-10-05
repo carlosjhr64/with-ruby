@@ -13,6 +13,12 @@ module VimMarkdown
   # * A cword help
   # See [NAVIGATION.md](../../NAVIGATION) for examples of each link type.
   module Navigation
+    def self.enable
+      # vim mappings
+      VIM.command 'nnoremap <buffer> <Backspace> <C-o>'
+      VIM.command 'nnoremap <buffer> <CR> :ruby VimMarkdown::Navigation.link_handler<CR>'
+    end
+
     MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^()]*)\)/
     HELP_TAG = /(?<link>\|[^"*|\s]+)\|/
     begin
@@ -34,12 +40,6 @@ module VimMarkdown
         endtry
       endtry
     }
-
-    def self.after_ftplugin
-      # vim mappings
-      VIM.command 'nnoremap <Backspace> <C-o>'
-      VIM.command 'nnoremap <CR> :ruby VimMarkdown::Navigation.link_handler<CR>'
-    end
 
     def self.anchor_command(heading)
       # Note that github uses '-' for spaces

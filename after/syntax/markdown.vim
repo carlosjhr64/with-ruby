@@ -1,1 +1,0 @@
-ruby VimMarkdown.after(:syntax)
