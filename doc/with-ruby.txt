@@ -48,7 +48,7 @@ FILES
     [CREDITS.md](../CREDITS.md)
     [VIM_MARKDOWN.md](../VIM_MARKDOWN.md)
     [NAVIGATION.md](../NAVIGATION.md)
-    [SYNTAX.md](../SYNTAX.md)
+    [FOLD.md](../FOLD.md)
     doc/
       with-ruby.txt
 

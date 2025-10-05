@@ -10,14 +10,14 @@
 ---
 Title:   The Title
 Author:  John Doe
-Plugins: navigation syntax
+Plugins: navigation fold
 ---
 ```
 The `Plugins:` metadata key should list the sub-plugins to be activated on the markdown file.
 The following `VimMarkdown` plugins are available:
 
 * [navigation](NAVIGATION.md)
-* [syntax](SYNTAX.md)
+* [fold](FOLD.md)
 
 If not specified, `Plugins:` defaults to as set in `g:VimMarkdownMetadataPlugins`(or nothing).
 ```vim
