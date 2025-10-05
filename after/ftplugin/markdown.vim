@@ -1,1 +1,1 @@
-ruby VimMarkdown.after(:ftplugin)
+ruby VimMarkdown.enable
