@@ -5,19 +5,18 @@ require 'English'
 # VimMarkdown is loaded into VIM when user opens a markdown file.
 # It expects the file to maybe have a header setting the plugins list.
 # Currently, the following plugins are supported:
-# * Plugins: navigation syntax
+# * Plugins: navigation fold
 module VimMarkdown
-  # VimMarkdown.after is called in:
-  # * after/syntax/markdown.vim as `ruby VimMarkdown.after(:syntax)`
-  # * after/ftplugin/markdown.vim as `ruby VimMarkdown.after(:ftplugin)`
-  def self.after(directory)
+  # VimMarkdown.enable is called in:
+  # * after/ftplugin/markdown.vim as `ruby VimMarkdown.enable`
+  def self.enable
     VIM.evaluate('b:VimMarkdownMetadataPlugins').split.each do |plugin|
-      # The following methods are defined:
-      # * VimMarkdown::Syntax.after_syntax
-      # * VimMarkdown::Navigation.after_ftplugin
-      VimMarkdown.const_get(plugin.capitalize).send "after_#{directory}"
-    rescue NameError
-      # Ignore
+      # With-Ruby includes the following:
+      # * VimMarkdown::Fold.enable
+      # * VimMarkdown::Navigation.enable
+      VimMarkdown.const_get(plugin.capitalize).enable
+    rescue
+      print $ERROR_INFO
     end
   end
 
